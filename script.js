@@ -49,7 +49,7 @@ function displayData(list) {
     var data = ``;
     var listSize = list.length
     for (var i = 0; i < listSize; i++) {
-        data += `<div class="task-item" data-index="${i}">
+        data += `<div class="task-item ${list[i].isDone ? 'done' : ''}" data-index="${i}">
             <div class="task-content">
                 <h4>${list[i].name}</h4>
                 <p class="task-desc">${list[i].desc || ""}</p>
@@ -79,11 +79,14 @@ function editData(idx) {
     taskDesc.value = taskList[idx].desc;
     btn.onclick = function() 
     {
-        taskList.splice(idx, 1, 
-            {name: taskTitle.value, desc: taskDesc.value});
-            displayData(taskList);
-            localStorage.setItem("taskList", JSON.stringify(taskList));
-            init();
+        taskList.splice(idx, 1, {
+            name: taskTitle.value,
+            desc: taskDesc.value,
+            isDone: taskList[idx].isDone
+        });
+        displayData(taskList);
+        localStorage.setItem("taskList", JSON.stringify(taskList));
+        init();
     }
 }
     else {
@@ -97,7 +100,7 @@ function markDone(index) {
     var items = document.querySelectorAll(".task-item");
     items[index].classList.toggle("done");
     taskList[index].isDone = !taskList[index].isDone;
-    
+    localStorage.setItem("taskList", JSON.stringify(taskList));
 }
 
 
