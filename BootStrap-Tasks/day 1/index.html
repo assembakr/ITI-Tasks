@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BootStrap - Day 1</title>
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-light" href="#home">Coffe Shop</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-secondary"
+                aria-current="page"
+                href="#home"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary" href="#menu">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled text-secondary" aria-disabled="true"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div
+      id="home"
+      class="bg-primary d-flex justify-content-center align-items-center p-3"
+    >
+      <div class="container w-75 text-center p-5">
+        <h1 class="text-light fw-bold mb-4">Welcome to Our Coffee Shop</h1>
+        <p class="text-light fs-5 mb-4 font-monospace fw-lighter">
+          Freshly brewed coffee every day
+        </p>
+        <button class="btn bg-warning text-black">Order Now</button>
+      </div>
+    </div>
+    <div
+      id="about"
+      class="bg-body-tertiary d-flex justify-content-center align-items-center p-2"
+    >
+      <div class="container w-50 text-center p-5">
+        <h1 class="text-secondary-emphasis mb-4 fw-lighter">
+          About Our Coffee
+        </h1>
+        <p class="text-light fs-5 mb-4 font-monospace fw-lighter"></p>
+        <p class="text-secondary lh-lg fs-5 font-monospace">
+          We serve the finest cofee beans from around the world. Our expert
+          <br />
+          baristas craft each cup with love and precision.
+        </p>
+      </div>
+    </div>
+
+    <div id="menu" class="d-flex justify-content-center align-items-center p-2">
+      <div class="container p-5 text-center">
+        <h1 class="text-secondary-emphasis mb-5">Our Menu</h1>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="card h-100 p-2">
+              <div class="card-body">
+                <h5 class="card-title text-primary mb-4">Espresso</h5>
+                <p class="card-text mb-4">Rich and bold espresso shot</p>
+                <button class="btn bg-success">$3.50</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="card h-100 p-2">
+              <div class="card-body">
+                <h5 class="card-title text-primary mb-4">Cappuccino</h5>
+                <p class="card-text mb-4">Espresso with steamed milk foam</p>
+                <button class="btn bg-success">$4.25</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="card h-100 p-2">
+              <div class="card-body">
+                <h5 class="card-title text-primary mb-4">Latte</h5>
+                <p class="card-text mb-4">Smooth espresso with steamed milk</p>
+                <button class="btn bg-success">$4.75</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-dark text-center p-5">
+      <h2 class="text-light">Visit Us Today</h2>
+      <p class="text-light">123 Coffee Street, Bean City</p>
+      <p class="text-light">(555) 123-COFFEE</p>
+      <p class="text-light">Open 7AM- 8PM Daily</p>
+      <button class="btn text-warning border-warning">Get Directions</button>
+    </div>
+  </body>
+</html>
